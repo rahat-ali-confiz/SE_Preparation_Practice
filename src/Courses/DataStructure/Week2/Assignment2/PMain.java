@@ -1,8 +1,8 @@
-package Courses.DataStructure.Week2.QueuePRactice.Assignment2;
+package Courses.DataStructure.Week2.Assignment2;
 
 import java.util.Scanner;
 
-import static Courses.DataStructure.Week2.QueuePRactice.Assignment2.PatientQueue.getPriority;
+import static Courses.DataStructure.Week2.Assignment2.PatientQueue.getPriority;
 
 public class PMain {
     public static void main(String[] args){

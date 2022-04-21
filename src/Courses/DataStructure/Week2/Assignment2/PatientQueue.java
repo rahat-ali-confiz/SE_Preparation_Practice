@@ -1,4 +1,4 @@
-package Courses.DataStructure.Week2.QueuePRactice.Assignment2;
+package Courses.DataStructure.Week2.Assignment2;
 
 public class PatientQueue {
     public PNode head;
