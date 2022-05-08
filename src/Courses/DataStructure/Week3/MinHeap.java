@@ -20,12 +20,9 @@ public class MinHeap {
         return pos > (size / 2) && pos <= size;
     }
 
-    private void swap(int fpos, int spos)
-    {
-
+    private void swap(int fpos, int spos){
         int tmp;
         tmp = Heap[fpos];
-
         Heap[fpos] = Heap[spos];
         Heap[spos] = tmp;
     }

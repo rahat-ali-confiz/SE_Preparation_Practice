@@ -1,5 +1,7 @@
 package Courses.DataStructure.Week2.QueuePRactice;
 
+
+
 public class PriorityQueue {
     private static QNode head;
 

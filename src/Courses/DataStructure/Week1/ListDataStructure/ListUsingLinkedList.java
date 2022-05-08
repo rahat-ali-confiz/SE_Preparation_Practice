@@ -7,7 +7,7 @@ public class ListUsingLinkedList<E> {
     private Node<E> current;
     private int size;
 
-    ListUsingLinkedList(){
+    public ListUsingLinkedList(){
         head = null;
         current = null;
         size =0;
@@ -26,7 +26,6 @@ public class ListUsingLinkedList<E> {
         if (size == 0){
             head = newNode;
             current = newNode;
-            prev = current;
         }
         else if (index==0){
             newNode.next = head;
@@ -70,10 +69,7 @@ public class ListUsingLinkedList<E> {
             return false;
         prev= current;
         current= current.next;
-        if (current==null || size==0)
-            return false;
-        else
-            return true;
+        return current != null && size != 0;
     }
     public void remove(){
         if (current!=null && current!=head){
@@ -86,10 +82,11 @@ public class ListUsingLinkedList<E> {
         prev = head;
         current = head;
     }
+
     public Node<E> reverse() {
          prev = null;
          current = head;
-        Node<E> next = null;
+         Node<E> next;
         while (current != null) {
             next = current.next;
             current.next= prev;
@@ -99,6 +96,40 @@ public class ListUsingLinkedList<E> {
         head = prev;
         return head;
     }
+
+    public E middleElement(){
+        current = head;
+        prev = head;
+        if (head!=null){
+            while(current!=null && current.next!=null){
+                current = current.next.next;
+                prev = prev.next;
+            }
+        }
+        return prev.getData();
+
+    }
+
+    public Node deleteMiddle(){
+        current = head;
+        prev = head;
+
+        Node<E> mid = head;
+        int counter =0;
+        if (head!=null){
+            while(current!=null && current.next!=null){
+                current = current.next.next;
+                mid = prev;
+                prev = prev.next;
+            }
+            mid.next=prev.next;
+        }
+        else
+            head = null;
+
+        return head;
+    }
+
     public void display() {
         current = head;
 

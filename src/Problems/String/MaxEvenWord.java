@@ -1,4 +1,4 @@
-package Courses.PF;
+package Problems.String;
 
 public class MaxEvenWord {
 
@@ -9,7 +9,7 @@ public class MaxEvenWord {
         int startingPoint= -1;
         int i =0;
         while(i<n){
-            if (str.charAt(i)==' '){
+            if (str.charAt(i)=='.'){
                 if(curLen%2==0){
                     if (maxLen < curLen){
                         maxLen = curLen;
@@ -35,16 +35,17 @@ public class MaxEvenWord {
     }
 
     public static void main(String[] args ){
-        String str = "This is the test to check Application";
+        String str = "This.is.the.test.to.check.Applications";
         System.out.println("The Max even word in the string is :"+maxWordInSentence(str));
+
 
         int i = 1234;
         int result =0;
         while (i!=0){
             int temp = i%10;
-            result = result *10+temp;
+            result = result*10+temp;
             i = i/10;
         }
-        System.out.println(result);
+      //  System.out.println(result);
     }
 }
