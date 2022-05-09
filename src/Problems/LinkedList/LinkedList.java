@@ -13,7 +13,6 @@ public class LinkedList<E> {
         current = null;
         size =0;
     }
-
     public boolean add(E e) {
         add(size, e);
 
@@ -76,21 +75,39 @@ public class LinkedList<E> {
         System.out.println();
     }
 
+
     public E middleElement(){
         Node<E> current = head;
-        Node<E> prev = head;
+        Node<E> mid = head;
 
         if (head!=null){
             while(current!=null && current.next!=null){
                 current = current.next.next;
-                prev = prev.next;
+                mid = mid.next;
             }
         }
 
-        return prev != null ? prev.element : null;
+        return mid != null ? mid.element : null;
     }
 
-    public Node<E> deleteMiddle() {
+    public void deleteNode(int x) {
+        if(x==1)
+            head = head.next;
+
+        Node<E> current = head;
+        Node<E> temp = null;
+
+        for(int i=1;i<x;i++){
+            temp = current;
+            current = current.next;
+        }
+
+        if (temp != null) {
+            temp.next = current.next;
+        }
+    }
+
+    public void deleteMiddle() {
         Node<E> current = head;
         Node<E> prev = null;
         Node<E> mid = head;
@@ -103,13 +120,11 @@ public class LinkedList<E> {
             }
             prev.next=mid.next;
         }
-
         else
             head = null;
-        return head;
     }
 
-    public Node<E> reverse() {
+    public void reverse() {
         current = head;
         Node<E> prev = null;
         Node<E> next;
@@ -121,10 +136,9 @@ public class LinkedList<E> {
             current = next;
         }
         head = prev;
-        return head;
     }
 
-    public Node<E> reverseBetween( int left, int right) {
+    public void reverseBetween(int left, int right) {
         current = head;
         Node<E> prev = null;
         Node<E> next;
@@ -144,7 +158,6 @@ public class LinkedList<E> {
             p2.next = current;
             p1.next = prev;
         }
-        return  head;
     }
 
     public Node<E> reverseByNthGroup(Node<E> head ,int k){
@@ -167,8 +180,6 @@ public class LinkedList<E> {
         }
         return prev;
     }
-
-
 
 
 }

@@ -19,15 +19,11 @@ public class QueueUsingLinkedList {
         }
         rear = node;
     }
-    public int dequeue(){
-        if (this.head == null)
-            return -1;
-
-        int temp = head.data;
-        head = head.next;
+    public void dequeue(){
         if (head == null)
-            rear = null;
-        return temp;
+            return;
+
+        head = head.next;
     }
 
     public void display(){

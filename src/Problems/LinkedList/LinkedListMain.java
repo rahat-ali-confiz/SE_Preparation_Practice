@@ -14,6 +14,8 @@ public class LinkedListMain {
         list.add(6);
         list.add(8);
 
+        list.deleteNode(5);
+        list.display();
         list.reverseBetween(1,6);
         list.display();
 

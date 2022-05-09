@@ -1,10 +1,10 @@
 package Problems.Queue;
 
-public class QueueUsingArray<T> {
-    private int[] queue;
+public class QueueUsingArray {
+    private final int[] queue;
     private static int front;
     private static int rear;
-    private static int size = 6;
+    private final int size = 6;
 
     QueueUsingArray(){
         queue = new int[size];
@@ -12,29 +12,19 @@ public class QueueUsingArray<T> {
         rear = 0;
     }
     public void enQueue(int x){
-        if(isEmpty()){
-            queue[rear] = x;
-            rear = (rear+1)%size;
 
-        }
-        else if(isFull()){
+        if(isFull())
             System.out.println("Queue is full");
-        }
-        else{
-            queue[rear] = x;
-            rear = (rear+1)%size;
 
-        }
+        queue[rear] = x;
+        rear = (rear+1)%size;
+
     }
 
-    public int deQueue(){
+    public void deQueue(){
         if(!isEmpty()){
-            int x = queue[front];
             front = (front+1)%size;
-            return x;
         }
-        else
-            return -1;
     }
     public boolean isFull(){return front == size;}
     public static boolean isEmpty(){ return front == rear;}

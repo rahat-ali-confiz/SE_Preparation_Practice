@@ -1,8 +1,9 @@
 package Problems.Queue;
 
+
 public class QMain {
     public static void main(String[] args){
-        QueueUsingArray<Integer> queue = new QueueUsingArray<>();
+        QueueUsingArray queue = new QueueUsingArray();
         queue.display();
         queue.enQueue(1);
         queue.enQueue(2);
@@ -24,5 +25,19 @@ public class QMain {
         q.display();
         q.dequeue();
         q.display();
+
+
+        QueueUsingStack q1 = new QueueUsingStack();
+        q1.push(1);
+        q1.push(2);
+        q1.push(150);
+        q1.push(4);
+
+        System.out.println(q1.pop());
+        q1.push(9);
+        System.out.println(q1.peek());
+        System.out.println(q1.pop());
+
+
     }
 }
