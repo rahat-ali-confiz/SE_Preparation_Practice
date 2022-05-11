@@ -1,26 +1,18 @@
 package Problems.String;
 
+
 public class reverseString {
-    public static void reverseWords(String S){
+    public static void reverseWords(String str){
 
-        int n = S.length();
-        String str="";
-        for(int i=n-1;i>=0;i--){
-            str += S.charAt(i);
+        String[] arr = str.split("\\.");
+        int strSize  = arr.length-1;
 
-            if (S.charAt(i)=='.'){
-                for (int j = str.length()-2;j>=0;--j)
-                    System.out.print(str.charAt(j));
-                System.out.print(".");
-                str = "";
-            }
-        }
-        for (int j=str.length()-1;j>=0;j--)
-            System.out.print(str.charAt(j));
-
+        for (int i= strSize; i>=0; i--)
+            System.out.print(arr[i]+".");
     }
     public static void main(String[] args ) {
         String str = "This.is.the.test.to.check.Applications";
-        reverseWords(str);
+
+       reverseWords(str);
     }
-}
+    }

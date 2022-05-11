@@ -3,13 +3,13 @@ package Problems.String;
 
 public class Palindrome {
 
-    public int isPalindrome(String S) {
+    public int isPalindrome(String s) {
         String str = "";
 
-        for(int i=S.length()-1;i>=0;i--){
-            str += S.charAt(i);
+        for(int i=s.length()-1;i>=0;i--){
+            str += s.charAt(i);
         }
-        if (str.equals(S))
+        if (str.equals(s))
             return 1;
         return 0;
     }

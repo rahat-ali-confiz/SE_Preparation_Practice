@@ -95,15 +95,15 @@ public class LinkedList<E> {
             head = head.next;
 
         Node<E> current = head;
-        Node<E> temp = null;
+        Node<E> prev = null;
 
         for(int i=1;i<x;i++){
-            temp = current;
+            prev = current;
             current = current.next;
         }
 
-        if (temp != null) {
-            temp.next = current.next;
+        if (prev != null) {
+            prev.next = current.next;
         }
     }
 
@@ -147,16 +147,16 @@ public class LinkedList<E> {
                 prev = current;
                 current = current.next;
             }
-            Node<E> p1 = prev;
-            Node<E> p2 = current;
+            Node<E> prePrev = prev;
+            Node<E> preCurrent = current;
             for (int i=left;i<=right;i++){
                 next = current.next;
                 current.next = prev;
                 prev = current;
                 current = next;
             }
-            p2.next = current;
-            p1.next = prev;
+            preCurrent.next = current;
+            prePrev.next = prev;
         }
     }
 
@@ -180,6 +180,5 @@ public class LinkedList<E> {
         }
         return prev;
     }
-
 
 }
