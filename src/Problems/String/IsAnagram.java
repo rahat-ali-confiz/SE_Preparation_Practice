@@ -2,23 +2,18 @@ package Problems.String;
 
 import java.util.Arrays;
 
-import static java.util.Arrays.sort;
-
 public class IsAnagram {
-    public static boolean isAnagram(String a,String b) {
-
-        if (a.length() != b.length()) {
+    public static boolean isAnagram(String a,String b){
+        if (a.length() != b.length()){
             return false;
         }
+
         char[] arr = a.toLowerCase().toCharArray();
         char[] arr1 = b.toLowerCase().toCharArray();
-        sort(arr);
-        sort(arr1);
+        Arrays.sort(arr);
+        Arrays.sort(arr1);
 
-        if (Arrays.equals(arr,arr1))
-            return true;
-        else
-            return false;
+        return Arrays.equals(arr, arr1);
     }
     public static void main(String[] args ){
         String S = "abca";

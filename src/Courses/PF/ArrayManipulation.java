@@ -172,10 +172,8 @@ public class ArrayManipulation {
 //        System.out.println("Array with columns reverse order");
 //
 //        for (int k =0;k< matrixArr.length;k++) {
-//
 //            for (int j = matrixArr.length - 1; j >= 0; j--) {
 //                System.out.print(matrixArr[k][j] + " ");
-//
 //            }
 //            System.out.println();
 //        }
@@ -183,7 +181,6 @@ public class ArrayManipulation {
 //            System.out.println("Transpose of a Matrix");
 //
 //            for (int i=0;i<matrixArr.length;i++) {
-//
 //                for (int j = 0; j < matrixArr.length; j++) {
 //                    System.out.print(matrixArr[j][i] + " ");
 //                }
@@ -202,7 +199,7 @@ public class ArrayManipulation {
 ////                break;
 ////            }
 ////        }
-////        if (equal ==1 ){
+////        if (equal == 1 ){
 ////            System.out.println("Alas! Arrays are not equal ");
 ////        }
 ////        else

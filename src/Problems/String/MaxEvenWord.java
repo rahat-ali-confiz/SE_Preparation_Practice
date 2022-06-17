@@ -4,16 +4,16 @@ public class MaxEvenWord {
 
     public static String maxWordInSentence(String str){
 
+
         String curLen = "";
-        String maxLen ="";
+        String maxLen = "";
         String[] s = str.split("\\.");
-        int size  = s.length;
 
-        for (int i=0;i<size;i++){
-            if (s[i].length()%2==0)
-                curLen = s[i];
+        for (String value : s) {
+            if (value.length() % 2 == 0)
+                curLen = value;
 
-            if(curLen.length() > maxLen.length()){
+            if (curLen.length() > maxLen.length()) {
                 maxLen = curLen;
                 curLen = "";
             }
@@ -22,7 +22,7 @@ public class MaxEvenWord {
 //        int n = str.length();
 //        int curLen = 0;
 //        int maxLen = 0;
-//        int startingPoint= -1;
+//        int startingPoint = -1;
 //        int i =0;
 //        while(i<n){
 //            if (str.charAt(i)=='.'){

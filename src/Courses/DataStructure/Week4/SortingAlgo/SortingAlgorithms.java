@@ -6,7 +6,7 @@ public class SortingAlgorithms {
 
         for (int i=0;i< arr.length;i++){
             int pos_min = i;
-            for (int j = i +1; j< arr.length; j++){
+            for (int j = i+1; j< arr.length; j++){
                 if (arr[j]< arr[pos_min])
                     pos_min = j;
             }
@@ -32,16 +32,20 @@ public class SortingAlgorithms {
     public void bubbleSort(int[] arr){
         int n = arr.length;
 
+        int temp;
         for (int i=0;i<n;i++){
             for (int j=0;j<n-i-1;j++){
                 if (arr[j]>arr[j+1]){
-                    swap(arr, j+1, j);
+                    temp = arr[j+1];
+                    arr[j+1] = arr[j];
+                    arr[j] = temp;
+  //                  swap(arr, j+1, j);
                 }
             }
         }
     }
 
-    public void merge(int arr[],int low, int mid, int high){
+    public void merge(int[] arr, int low, int mid, int high){
 
             int n1 = mid - low + 1;
             int n2 = high - mid;
@@ -119,9 +123,9 @@ public class SortingAlgorithms {
         arr[i] = temp;
     }
 
-    public  void printArray(int arr[]){
-        for (int i=0; i<arr.length; ++i)
-            System.out.print(arr[i]+" ");
+    public  void printArray(int[] arr){
+        for (int j : arr)
+            System.out.print(j + " ");
         System.out.println();
     }
 

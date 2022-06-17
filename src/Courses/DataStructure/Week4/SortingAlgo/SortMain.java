@@ -5,8 +5,8 @@ public class SortMain {
     {
         SortingAlgorithms ob = new SortingAlgorithms();
         int[] arr = {64,25,12,22,11};
-        ob.selectionSort(arr);
-        System.out.println("Sorted array after SelectionSort");
+//        ob.selectionSort(arr);
+//        System.out.println("Sorted array after SelectionSort");
         ob.printArray(arr);
         ob.bubbleSort(arr);
         ob.quickSort(arr, 0, arr.length - 1);

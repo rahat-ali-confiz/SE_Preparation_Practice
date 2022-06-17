@@ -15,13 +15,14 @@ public class TMain {
         }
 
         BinaryTree<Integer> bTree = new BinaryTree<>(node);
-        bTree.preOrder(node);
-        System.out.println();
-        bTree.inOrder(node);
-        System.out.println();
+//        bTree.preOrder(node);
+//        System.out.println();
+//        bTree.inOrder(node);
+//        System.out.println("Level Order");
+//        bTree.mirrorTree(node);
+//        System.out.println();
+        System.out.println("Mirror Order");
         bTree.levelOrder(node);
-        System.out.println();
-        bTree.postOrder(node);
 
 
     }
