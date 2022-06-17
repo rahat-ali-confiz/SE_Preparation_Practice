@@ -1,6 +1,7 @@
 package Courses.DataStructure.Week2.BST;
 
 
+
 public class TreeNode<T> {
     private T key;
     private TreeNode<T> left, right;
@@ -16,6 +17,7 @@ public class TreeNode<T> {
         left = null;
         right = null;
     }
+
 
     public TreeNode<T> getLeft() {
         return left;

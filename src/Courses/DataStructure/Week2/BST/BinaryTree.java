@@ -1,9 +1,7 @@
 package Courses.DataStructure.Week2.BST;
 
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class BinaryTree<T> {
     TreeNode<T> root;
@@ -92,6 +90,29 @@ public class BinaryTree<T> {
 
         while(!nodeQueue.isEmpty()){
             treeNode = nodeQueue.remove();
+            System.out.print(treeNode.getKey()+" ");
+            if (treeNode.getLeft()!= null)
+                nodeQueue.add(treeNode.getLeft());
+            if (treeNode.getRight() !=null)
+                nodeQueue.add(treeNode.getRight());
+        }
+    }
+
+
+    public void mirrorTree(TreeNode treeNode){
+        Queue<TreeNode> nodeQueue = new LinkedList<>();
+        if (treeNode == null)
+            return;
+        nodeQueue.add(treeNode);
+
+        while(!nodeQueue.isEmpty()){
+            treeNode = nodeQueue.peek();
+            nodeQueue.remove();
+
+            TreeNode temp = treeNode.getRight();
+            treeNode.setRight(treeNode.getLeft());
+            treeNode.setLeft(temp);
+
             System.out.print(treeNode.getKey()+" ");
             if (treeNode.getLeft()!= null)
                 nodeQueue.add(treeNode.getLeft());
